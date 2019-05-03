@@ -1,11 +1,13 @@
+<div class="container-fluid">
 <h1>Trending Quotes</h1>
 <hr>
 <!--list of trending quotes-->
 <ul>
   <div *ngFor='let quote of quotes;let i = index'>
     <li id = "{{i}}">{{quote.name}}</li>
-    <button (click)='toggleDetails(i)'>Quote Details</button>
+    <button class="btn btn-success" (click)='toggleDetails(i)'>Quote Details</button>
 
     <app-quotes-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quotes-details>
   </div>
 </ul> 
+</div>
