@@ -2,5 +2,10 @@
 <hr>
 <!--list of trending quotes-->
 <ul>
-  <li *ngFor='let quote of quotes'>{{ quote.name }}</li>
-</ul>
+  <div *ngFor='let quote of quotes;let i = index'>
+    <li>{{quote.name}}</li>
+    <button (click)='toggleDetails(i)'>Quote Details</button>
+
+    <app-quotes-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quotes-details>
+  </div>
+</ul> 
