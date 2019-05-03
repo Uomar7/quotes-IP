@@ -3,7 +3,7 @@
 <!--list of trending quotes-->
 <ul>
   <div *ngFor='let quote of quotes;let i = index'>
-    <li>{{quote.name}}</li>
+    <li id = "{{i}}">{{quote.name}}</li>
     <button (click)='toggleDetails(i)'>Quote Details</button>
 
     <app-quotes-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quotes-details>

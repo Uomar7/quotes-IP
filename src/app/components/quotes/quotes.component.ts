@@ -9,9 +9,9 @@ import { Quote } from '../../quote'
 export class QuotesComponent implements OnInit {
   //Trending quotes displayed on Homepage
   quotes = [
-    new Quote('Get Rich or Die Trying', '"50" Cent'),
-    new Quote('The Dream is Free but the Hustle is sold separately', 'Unknown'),
-    new Quote('Life is what happens when you are busy making other plans', 'John Lennon'),
+    new Quote('Get Rich or Die Trying', '"50" Cent', new Date(2002, 3, 14)),
+    new Quote('The Dream is Free but the Hustle is sold separately', 'Unknown', new Date(1992, 7, 21)),
+    new Quote('Life is what happens when you are busy making other plans', 'John Lennon', new Date(1999, 11, 28)),
   ]
 
   toggleDetails(index) {

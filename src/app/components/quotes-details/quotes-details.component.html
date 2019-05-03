@@ -1,2 +1,3 @@
-<p>{{ quote.description }}</p>
+<p>This is a quote by {{ quote.description }}</p>
+<p>Published on {{quote.publishDate|date}}</p>
 <button (click) = 'quoteComplete(true)'> Delete </button>
