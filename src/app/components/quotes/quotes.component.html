@@ -1,18 +1,27 @@
-<div class="container-fluid">
-<h1>Trending Quotes</h1>
-<hr>
-<hr>
-<br>
-<!--list of trending quotes-->
-<ul>
-  <div *ngFor='let quote of quotes;let i = index'>
-    <li id = "{{i}}">{{quote.name}}</li>
-    <button class="btn btn-success" (click)='toggleDetails(i)'>Quote Details</button>
+<div class="container ">
+  <div class = "col-md-6">
+    <div class="jumbotron">
 
-    <app-quotes-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quotes-details>
+      <h1>Trending Quotes</h1>
+      <hr>
+      <hr>
+      <br>
+      <!--list of trending quotes-->
+      <div class="row">
+        <app-quote-form></app-quote-form>
+      </div>
+      <ul>
+        <div *ngFor='let quote of quotes;let i = index'>
+          <li id="{{i}}">{{quote.name}}</li>
+          <button class="btn btn-success" (click)='toggleDetails(i)'>Quote Details</button>
+
+          <app-quotes-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='completeQuote($event,i)'>
+          </app-quotes-details>
+        </div>
+      </ul>
+      <br>
+      <hr>
+      <hr>
+    </div>
   </div>
-</ul> 
-<br>
-<hr>
-<hr>
 </div>
