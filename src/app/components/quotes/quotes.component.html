@@ -1,6 +1,8 @@
 <div class="container-fluid">
 <h1>Trending Quotes</h1>
 <hr>
+<hr>
+<br>
 <!--list of trending quotes-->
 <ul>
   <div *ngFor='let quote of quotes;let i = index'>
@@ -10,4 +12,7 @@
     <app-quotes-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quotes-details>
   </div>
 </ul> 
+<br>
+<hr>
+<hr>
 </div>
