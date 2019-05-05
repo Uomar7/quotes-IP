@@ -2,26 +2,25 @@
   <div class="row">
     <div class="col-md-6">
       <div class="jumbotron">
-        <form>
+        <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
           <div class="form-group">
 
             <label for="yourname">Your Name</label>
-            <input type="text" required class="form-control" id="yourname">
+            <input type="text" required class="form-control" name="name" id="yourname" [(ngModel)]=newQuote.name #yourname="ngModel">
 
           </div>
           <div class="form-group">
 
             <label for="quote">Qoute</label>
-            <textarea class="form-control" id="description" rows="4" required></textarea>
+            <textarea class="form-control" id="description" name="name" rows="4" required [(ngModel)]=newQuote.description #description="ngModel"></textarea>
 
           </div>
           <div class="form-group">
             <label for="publishdate">Publish Date</label>
-            <input type='date' id="complete" required>
+            <input type='date' id="complete" required name="name" [(ngModel)]=newQuote.publishdate #publishdate="ngModel">
 
           </div>
           <button type="Submit" class="btn btn-success btn-lg">Add Quote</button>
-          <form (ngSubmit)='submitQuote()' #quoteForm='ngQuote'></form>
         </form>
       </div>
     </div>

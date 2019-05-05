@@ -8,8 +8,9 @@
       <br>
       <!--list of trending quotes-->
       <div class="row">
-        <app-quote-form></app-quote-form>
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
       </div>
+      
       <ul>
         <div *ngFor='let quote of quotes;let i = index'>
           <li id="{{i}}">{{quote.name}}</li>
