@@ -20,9 +20,12 @@ A user should be able to;
     The UI templates can be tested on [github pages](https://tgalvinjr.github.io/Pig-Dice/)
     
 ## Setup instructions
-
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Install Nodejs and angular using npm in the terminal
+From Git Hub,clone this repository
+Change directory to quotes-IP by running the command $cd quotes-IP
+Open the application by running $ng serve --o
+Type and save your favorite quote(s)
+If opened on an editor, the app will automatically reload if you change any of the source files.
 
 ## Technologies 
 `HTML5`, `CSS3`, `JavaScript`, `Bootstrap`, `Typescript`, `Angular CLI`, 
