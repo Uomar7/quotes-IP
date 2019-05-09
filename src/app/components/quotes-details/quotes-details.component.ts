@@ -13,6 +13,9 @@ export class QuotesDetailsComponent implements OnInit {
 
   @Input() quote: Quote;
   @Output() isComplete = new EventEmitter<boolean>();
+  @Output() isPlus = new EventEmitter<boolean>();
+  @Output() isMinus = new EventEmitter<boolean>();
+
 
   quoteComplete(complete: boolean) {
     this.isComplete.emit(complete);
@@ -24,9 +27,6 @@ export class QuotesDetailsComponent implements OnInit {
   }
   voteMinus(minus: boolean) {
     this.isMinus.emit(minus);
-  }
-  delQuote(i) {
-    this.quote.splice(i, 1)
   }
 
   like() {
