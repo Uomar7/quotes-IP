@@ -1,4 +1,4 @@
-import { Component, OnInit,  } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { Quote } from '../../quote'
 
 @Component({
@@ -9,9 +9,9 @@ import { Quote } from '../../quote'
 export class QuotesComponent implements OnInit {
   //Trending quotes displayed on Homepage
   quotes = [
-    new Quote(0,'Get Rich or Die Trying', '"50" Cent', new Date(2002, 3, 14), 'Stamura'),
-    new Quote(1,'The Dream is Free but the Hustle is sold separately', 'Unknown', new Date(1992, 7, 21), 'Moringa'),
-    new Quote(2,'Life is what happens when you are busy making other plans', 'John Lennon', new Date(1999, 11, 28), 'Mchungcheng'),
+    new Quote(0, 'Get Rich or Die Trying', '"50" Cent', new Date(2002, 3, 14), 'Stamura', 0, 0),
+    new Quote(1, 'The Dream is Free but the Hustle is sold separately', 'Unknown', new Date(1992, 7, 21), 'Moringa', 0, 0),
+    new Quote(2, 'Life is what happens when you are busy making other plans', 'John Lennon', new Date(1999, 11, 28), 'Mchungcheng', 0, 0),
   ]
 
   toggleDetails(index) {
@@ -23,13 +23,13 @@ export class QuotesComponent implements OnInit {
       this.quotes.splice(index, 1);
     }
   }
-  addNewQuote(quote){
+  addNewQuote(quote) {
     let quoteLength = this.quotes.length;
-    quote.id=quoteLength+1;
+    quote.id = quoteLength + 1;
     quote.publishDate = new Date(quote.publishDate)
     this.quotes.push(quote)
 
-}
+  }
 
   constructor() { }
 
