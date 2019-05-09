@@ -44,7 +44,7 @@ Alvin Michoma
 [Github](https://github.com/tgalvinjr)
 
 ## License and Copyright information
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/tgalvinjr/Pig-Dice/blob/master/LICENSE)file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/tgalvinjr/Pig-Dice/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 - Hat tip to everyone who unblocked me in class
