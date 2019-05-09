@@ -15,9 +15,15 @@ A user should be able to;
 ## BDD
 | BEHAVIOUR                            | INPUT EXAMPLE                           | OUTPUT EXAMPLES       |
 |--------------------------------------|:------------------------------------:|--------------------------|
+|A user leaves the text area empty | Nothing is inputted | Nothing is displayed |
+| A user wants to add a new quote | Author name, quote, publish date and their name | The app saves the details and the number of quotes increases by 1|
+|A user wants to delete a quote | Click the delete button | The number of quotes decreases by 1 |
+|A user upvotes a quote | Click upvote button | Number of upvotes on that quote increase by 1 |
+|A user downvotes a quote | Click downvote button | Number of downvotes on that quote increase by 1 |
+|A user wants to view additional quote details | Click Quote Details button | Toggle effect kicks in and additional details are displayed |
 
 ## Github Pages
-    The UI templates can be tested on [github pages](https://tgalvinjr.github.io/Pig-Dice/)
+    The UI templates can be tested on [github pages](https://tgalvinjr.github.io/quotes-IP/)
     
 ## Setup instructions
 Install Nodejs and angular using npm in the terminal
