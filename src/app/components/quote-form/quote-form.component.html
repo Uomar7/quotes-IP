@@ -5,7 +5,7 @@
         <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
           <div class="form-group">
 
-            <label for="yourname">Your Name</label>
+            <label for="yourname">Quote Author</label>
             <input type="text" required class="form-control" name="name" id="yourname" [(ngModel)]=newQuote.name #yourname="ngModel">
 
           </div>
@@ -15,6 +15,12 @@
             <textarea class="form-control" id="description" name="name" rows="4" required [(ngModel)]=newQuote.description #description="ngModel"></textarea>
 
           </div>
+          <div class="form-group">
+
+              <label for="publisher">Your Name</label>
+              <input type="text" required class="form-control" name="name" id="publisher" [(ngModel)]=newQuote.publisher #publisher="ngModel">
+  
+            </div>
           <div class="form-group">
             <label for="publishdate">Publish Date</label>
             <input type='date' id="complete" required name="name" [(ngModel)]=newQuote.publishdate #publishdate="ngModel">

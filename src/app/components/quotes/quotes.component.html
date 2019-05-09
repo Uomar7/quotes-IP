@@ -1,16 +1,27 @@
-<div class="container ">
-  <div class = "col-md-6">
+<div class="container">
+  <div class="col-md-12">
     <div class="jumbotron">
 
-      <h1>Trending Quotes</h1>
+      <h1>Welcome to Quotes</h1>
+      <p>This is an interactive application that allows users to create quotes.
+        Other users can upvote or downvote a quote depending on whether the quote is terrible or inspirational.
+      </p>
       <hr>
       <hr>
       <br>
-      <!--list of trending quotes-->
+    <h2>Add New Quote(s)</h2>
       <div class="row">
-        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+        <div class="col-md-12">
+          <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+        </div>
+        <hr>
       </div>
-      
+      <hr>
+      <hr>
+        <!--list of trending quotes-->
+      <h1>Trending Quotes</h1>
+      <p>These are the most trending quotes at the Moment!</p>
+      <br>
       <ul>
         <div *ngFor='let quote of quotes;let i = index'>
           <li id="{{i}}">{{quote.description}}</li>
@@ -25,4 +36,3 @@
       <hr>
     </div>
   </div>
-</div>
